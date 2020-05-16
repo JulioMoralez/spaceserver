@@ -20,7 +20,7 @@ public class HttpCorsConfig implements Filter {
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
         final HttpServletResponse response = (HttpServletResponse) res;
-        response.setHeader("Access-Control-Allow-Origin", url + ":4200");
+        response.setHeader("Access-Control-Allow-Origin", url);
 //        response.setHeader("Access-Control-Allow-Origin", url + ":" + frontPort);
         response.setHeader("Access-Control-Allow-Methods", "POST, PUT, GET, OPTIONS, DELETE");
         response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type");
